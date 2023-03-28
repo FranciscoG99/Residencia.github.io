@@ -1,0 +1,774 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 730px;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.50), rgba(5, 7, 12, 0.50)), url(Imagenes/IKEA-RESIDENCIA.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Alfa Slab One', cursive;
+}
+
+h2 {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+.header-content {
+    width: 600px;
+    margin-bottom: 200px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* .header-content h1 {
+    font-size: 50px;
+} */
+
+.ctn {
+    padding: 8px 15px;
+    background: red;
+    border-radius: 30px;
+    color: whitesmoke;
+    font-size: 17px;
+}
+
+
+.line {
+    width: 150px;
+    height: 4px;
+    background-color: red;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.active {
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+}
+
+.nav-links li {
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.nav-links .color-red:hover {
+    color: red;
+}
+
+
+#inicio-rojo {
+    color: red;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* celular INICIO*/
+@media only screen and (max-width:850px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-size: 25px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: gray;
+        margin-top: -900px;
+        transition: all 0.5s ease
+    }
+
+    .mobile-menu {
+        margin-top: 0;
+        border-bottom-right-radius: 30%;
+    }
+
+    .nav-links li {
+        margin: 30px auto;
+    }
+}
+
+/* ----------------------------------------------------------------- */
+
+.btn-wsp {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    bottom: 155px;
+    right: 5px;
+    background: #0df053;
+    color: white;
+    /* border-radius: 50px; */
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.btn-wsp:hover {
+    background: white;
+    color: #0df053;
+}
+
+.a {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    bottom: 408px;
+    right: 5px;
+    background: red;
+    color: white;
+    /* border-radius: 50px; */
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    /*ACOMODAR LA SOMBRA TENIA 0 1 10*/
+    z-index: 100;
+}
+
+.animado {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.mostrarAbajo {
+    animation: mostrarAbajo 0.8s;
+}
+
+@keyframes mostrarAbajo {
+    0% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translatey(0);
+    }
+}
+
+.a:hover {
+    background: white;
+    color: red;
+}
+
+.b {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    bottom: 358px;
+    right: 5px;
+    background: red;
+    color: white;
+
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.b:hover {
+    background: white;
+    color: red;
+}
+
+.c {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    bottom: 307px;
+    right: 5px;
+    background: red;
+    color: white;
+
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.c:hover {
+    background: white;
+    color: red;
+}
+
+.d {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    bottom: 256px;
+    right: 5px;
+    background: red;
+    color: white;
+
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.d:hover {
+    background: white;
+    color: red;
+}
+
+.e {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    bottom: 206px;
+    right: 5px;
+    background: rgb(255, 122, 122);
+    color: white;
+
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.e:hover {
+    background: white;
+    color: rgb(255, 122, 122);
+}
+
+/* SOBRE NOSOTROS -------------------------------------------------*/
+
+.section-content {
+    width: 100%;
+}
+
+.section-content h2 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sobre-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.list-sobre-nosotros {
+    background-color: whitesmoke;
+    display: grid;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    text-align: justify;
+    width: 100%;
+}
+
+.imagen-sobre-nosotros {
+    background-color: cadetblue;
+    overflow: hidden;
+    width: 100%;
+}
+
+@media only screen and (max-width:500px) {
+    .section-content h2 {
+        font-size: 30px;
+    }
+
+    .sobre-nosotros {
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .imagen-sobre-nosotros {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .sobre-nosotros {
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .imagen-sobre-nosotros {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* SERVICIOS -------------------------------------------------*/
+
+.section-servicio h2 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* 
+.servicios-content {
+    display: flex;
+    float: right;
+    overflow: hidden;
+}
+
+.servicioUno {
+    margin-top: 10px;
+    margin-left: 10px;
+
+    background: whitesmoke;
+    width: 20%;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.serv {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.servicioUno {
+    margin: 10px 20px;
+}
+
+.servicioUno img {
+    padding: 10px;
+}
+
+#servicios-content {
+    display: block;
+    justify-content: center;
+}
+
+.contenedor-servicios1 {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-servicios2 {
+    display: flex;
+    justify-content: center;
+} */
+.section-servicio h2 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#servicios-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.servicioUno1 {
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 5px;
+}
+
+.servicioUno1 img {
+    display: grid;
+    margin: 0 auto;
+}
+
+.serv {
+    text-align: center;
+}
+
+@media only screen and (max-width:1024px) {
+    #servicios-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #servicios-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*Celular SERVICIOS OFRECEMOS*/
+
+@media only screen and (max-width:1235px) {
+    .servicioUno {
+        display: inline-block;
+    }
+}
+
+/*GALERIA ---------------------------------------------------------*/
+
+.section-imagenes h2 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.contenedor-imagenes {
+    background-color: whitesmoke;
+    width: 80%;
+    height: 20%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.contenedor-imagenes img {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-imagenes img:hover {
+    transform: scale(1.2);
+    box-shadow: none;
+}
+
+.ful-img {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.ful-img span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ful-img img {
+    width: 90%;
+    max-width: 600px;
+}
+
+
+/*CONTACTO--------------------------------------------------------*/
+
+.section-contacto h2 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.ubicacion-contacto {
+    display: flex;
+    background: #990808;
+}
+
+.ubicacion-contacto h5 {
+    color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.ubicacion {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+}
+
+.contactenos-info {
+    padding: 20px;
+    color: white;
+    display: flex;
+    font-size: 25px;
+}
+
+.contactenos-info p {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.contactenos-info i {
+    font-size: 50px;
+}
+
+
+.contactenos-info a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.contenedor-info {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+/*Celular CONTACTO UBICACIÓN*/
+
+@media only screen and (max-width:1149px) {
+    .ubicacion-contacto {
+        display: inline-block;
+        width: 100%;
+        align-items: center;
+    }
+
+    .ubicacion {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ubicacion iframe {
+        width: 650px;
+    }
+
+    .contactenos-info {
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:686px) {
+    .ubicacion iframe {
+        width: 480px;
+    }
+
+    .contactenos-info {
+        font-size: 20px;
+    }
+
+    .contactenos {
+        padding-bottom: 20px;
+    }
+
+    .contactenos-info a i {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    .contactenos h5 {
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .ubicacion iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .contactenos-info {
+        font-size: 12px;
+    }
+}
+
+/*FOOTER --------------------------------------------------------*/
+
+.footer-copy {
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    padding: 40px 40px;
+    text-align: center;
+}
+
+/*Celular FOOTER*/
+
+@media only screen and (max-width: 500px) {
+    .footer-copy {
+        padding-top: 5px;
+        padding: 20px 20px;
+        font-size: 12px;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+
+/* animacion de Residencia Del Sol */
+
+.paraAnimar {
+    display: flex;
+
+    justify-content: center;
+    /* width: 380px; */
+    height: 40px;
+
+    line-height: 40px;
+    font-size: 40px;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    overflow: hidden;
+}
+
+
+
+/* .contenedor-animando {
+
+    display: flex;
+
+    justify-content: center;
+
+    height: 40px;
+
+    line-height: 40px;
+    font-size: 40px;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    overflow: hidden;
+} */
+
+.lista-animaciones {
+    list-style: none;
+    padding-left: 10px;
+    animation: cambiar 6s infinite;
+
+}
+
+.lista-animaciones,
+h1 {
+    text-align: left;
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+@keyframes cambiar {
+    0% {
+        margin-top: 0;
+    }
+
+    20% {
+        margin-top: 0;
+    }
+
+    25% {
+        margin-top: -40px;
+    }
+
+    55% {
+        margin-top: -40px;
+    }
+
+
+    65% {
+        margin-top: -40px;
+    }
+
+    80% {
+        margin-top: -40px;
+    }
+
+
+    85% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
